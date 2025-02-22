@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0 auto;
+    width: 80%;
+    letter-spacing: 1px;
+}
+/* Home Page */
+header{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+}
+header .logo_name img{
+    width: 200px;
+}
+header nav ul{
+    display: flex;
+
+    padding: 20px;
+    gap: 40px;
+}
+header nav ul li{
+    list-style: none;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    border-radius: 10px;
+}
+header nav ul li a:hover{
+    background-color: #10669f;
+    color: white;
+}
+.login, .signup{
+    padding: 5px 10px;
+    background: #10669f;
+    border-radius: 30px;
+    color: #fff;
+}
+
+main{
+    position: relative;
+}
+main .about img{
+    position: relative;
+    width: 100%;
+}
+main .about h1{
+    position: absolute;
+    top: 10%;
+    left:1%;
+    font-weight: 300;
+    font-size: 80px;
+    letter-spacing: 10px;
+    color: #ffffff;
+}
+main .about h1 span{
+    color: #10669f;
+}
+main .about p{
+    position: absolute;
+    top: 17%;
+    left:2%;
+    color: white;
+    font-weight: 500;
+    font-size: 17px;
+}
+main .form {
+    width: 100%;
+    background: #10669f;
+}
+main .form .text-header h1{
+    text-align: center;
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 50px;
+}
+main .form{
+
+    border-radius: 20px;
+}
+main .form .side{
+    display: flex;
+    justify-content: space-around;
+}
+main .form .side #right {
+    display: block;
+    padding: 50px;
+    width: 90%;
+    color: #ffffff;
+}
+main .form .side #right h3{
+    font-size: 25px;
+}
+main .form .side #right p{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+main .form .side #right a{
+    padding: 10px;
+    background: #ffffff;
+    color: #10669f;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 20px;
+}
+main .form .side form {
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    background: #ffffff;
+    margin: 10px 20px;
+}
+main .form .side form h2{
+    text-align: center;
+    font-weight: 400;
+}
+main .form .side form p{
+    text-align: justify;
+    font-weight: 300;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+main .form .side form fieldset{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    border: none;
+}
+main .form .side form fieldset .field{
+    padding: 2px;
+}
+main .form .side form fieldset .field label{
+    font-weight: 500;
+    font-size: 14px;
+}
+main .form .side form fieldset .field select{
+    width: 100%;
+    padding: 8px;
+    font-family: "Poppins", sans-serif;
+}
+main .form .side form .field-radio{
+    padding: 5px;
+}
+main .form .side form .field-radio .fradio input{
+    margin-right: 30px;
+}
+main .form .side form .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+main .form .side form .button button{
+    padding: 15px 80px;
+    border-radius: 20px ;
+    background: #10669f;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+main .form .side form .button button:hover{
+    background: #0056b3;
+}
+main .info{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+main .info .address-and-phone{
+    padding: 10px;
+    margin: 20px;
+    width: 100%;
+}
+main .info .address-and-phone .address, .phone ,.information{
+    margin: 20px;
+    border-radius: 20px;
+    border: 2px solid #10669f;
+    padding: 30px;
+}
+main .info .address-and-phone .address h3{
+    color: #10669f;
+    font-weight: 400;
+    font-size: 30px;
+}
+main .info .address-and-phone .phone h2{
+    color: #10669f;
+    font-weight: 400;
+    font-size: 30px;
+}
+main .info .address-and-phone .phone h3{
+    font-weight: 400;
+    font-size: 18px;
+}
+main .info .address-and-phone .phone h3 span{
+    color: #10669f;
+    text-decoration: underline;
+}
+main .info .information h2{
+    color: #10669f;
+    font-weight: 400;
+    font-size: 30px;
+}
+main .info .information p{
+    color: #10669f;
+    font-size: 14px;
+}
+main .info .information .field {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+main .info .information .field input{
+    width: 80%;
+    font-family: "Poppins", sans-serif;
+    padding: 5px;
+    font-size: 15px;
+}
+main .info .information .more textarea{
+    width: 80%;
+    padding: 5px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+}
+main .info button{
+    padding: 10px;
+    border-radius: 10px;
+    width: 60%;
+    background: #10669f;
+    margin: 10px 0;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-weight: 300;
+    font-size: 20px;
+}
+main .info button:hover{
+    background: #007bff;
+}
+footer{
+    background: #10669f;
+    height: 688px;
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+footer .on {
+    display: block;
+}
+footer .on img {
+    width: 20%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+footer .on h1{
+    font-size: 35px;
+    color: #ffffff;
+    margin-top: 1px;
+    font-weight: 400;
+}
+footer .on h3{
+    color: #ffffff;
+    font-weight: 200;
+    margin-bottom: 40px;
+}
+footer .on a{
+    color: #10669f;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 30px;
+}
+footer .up{
+    border-top: 2px solid #ffffff;
+    margin: 50px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #ffffff;
+}
+footer .up .menu, .contact, .social{
+    display: block;
+    text-align: start;
+}
+footer .up .menu h1, .contact h1, .social h1{
+    font-weight: 400;
+}
+footer .up .menu h3, .contact h3, .social h3{
+    font-weight: 200;
+}
