@@ -40,3 +40,12 @@ function autoSlide() {
 }
 
 autoSlide();
+
+
+document.getElementById("cart-icon").addEventListener("click", function() {
+    document.getElementById("cart-sidebar").classList.add("active");
+});
+
+document.getElementById("close-cart").addEventListener("click", function() {
+    document.getElementById("cart-sidebar").classList.remove("active");
+});
