@@ -64,16 +64,16 @@ header nav ul li a:hover{
 }
 .portrait2 h1{
     position: absolute;
-    top: 7%;
-    left: 3%;
-    font-size: 95px;
+    top: 37%;
+    left: 13%;
+    font-size: 75px;
     font-weight: 400;
     color: #10669f;
     letter-spacing: 5px;
 
 }
 .portrait2 p{
-    position: absolute;top: 13%;letter-spacing: 1px;left: 3%;color: #10669f;font-size: 25px;
+    position: absolute;top: 50%;letter-spacing: 1px;left: 13%;color: #10669f;font-size: 18px;
 }
 .quote{
     width: 100%;
