@@ -3,8 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <title>Cart Details</title>
+    <link rel="stylesheet" href="assets/css/cart-details.css">
 </head>
 <body>
+<header>
+    <div class="logo_name">
+        <a href="index.html"><img src="assets/images/logocleaning.png" alt=""></a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="products.html">products</a></li>
+            <li><a href="contact.html">contact us</a></li>
+            <li><a href="#" id="cart-icon"><img src="assets/images/cart-icon-28344 9.png" alt=""></a></li>
+            <li><a href="#" class="login">login</a></li>
+            <li><a href="#" class="signup">sign up</a></li>
+        </ul>
+    </nav>
+</header>
+<div id="cart-sidebar" class="cart-sidebar">
+    <button id="close-cart">&times;</button>
+    <h2>Your Cart</h2>
+    <ul>
+        <li><a href="./cart-details.html"><img src="./assets/images/Mr-Muscle.png" alt="">Floor CLeaner <span>$9.98</span></a></li>
+        <li><a href="./cart-details.html"><img src="./assets/images/Mr-Muscle1.png" alt="">Breeze <span>$7.98</span></a></li>
+        <li><a href="./cart-details.html"><img src="./assets/images/Mr-Muscle2.png" alt="">Cloths CLeaner <span>$6.98</span></a></li>
+    </ul>
+    <hr>
+    <p><strong>Total: $20</strong></p>
+    <button class="checkout-btn">Continue to Checkout</button>
+</div>
 
+<div class="slider">
+    <div class="slider-container">
+        <div class="slider-item active">
+            <img src="/assets/images/portrait1.png" alt="Slide 1">
+            <div class="text">
+                <h2>We help you to keep your place clean</h2>
+                <p>We use specialized and quality equipment tools for cleaning.</p>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+        <div class="slider-item">
+            <img src="/assets/images/portrait2.png" alt="Slide 2">
+            <div class="text">
+                <h2>Professional Cleaning Services</h2>
+                <p>Our team ensures your space stays spotless and hygienic.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+        <div class="slider-item">
+            <img src="/assets/images/portrait3.png" alt="Slide 3">
+            <div class="text">
+                <h2>Reliable and Efficient</h2>
+                <p>Experience the best cleaning solutions tailored to your needs.</p>
+                <a href="#">Get Started</a>
+            </div>
+        </div>
+        <div class="slider-item">
+            <img src="/assets/images/portrait4.png" alt="Slide 4">
+            <div class="text">
+                <h2>Clean Spaces, Happy Faces</h2>
+                <p>We prioritize cleanliness for a healthier environment.</p>
+                <a href="#">Book Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+    <!-- Dots -->
+    <div class="dots"></div>
+</div>
+
+
+<footer>
+    <div class="on">
+        <img src="/assets/images/houselogo.png" alt="">
+        <h1>HOUSE CLEANING SERVICE</h1>
+        <h3>Abouts more information you can :</h3>
+        <a href="#">Contact us</a>
+    </div>
+    <div class="up">
+        <div class="menu">
+            <h1>Menu</h1>
+            <h3>Services and Prices</h3>
+            <h3>About</h3>
+            <h3>Reviews</h3>
+            <h3>For Customers</h3>
+
+        </div>
+        <div class="contact">
+            <h1>Contact</h1>
+            <h3>Tel: 070 076 267</h3>
+            <h3>Email: info@cleaningservice.com</h3>
+            <h3>st110, TK, Phnom Penh</h3>
+        </div>
+        <div class="social">
+            <h1>Social</h1>
+            <h3>Instagram</h3>
+            <h3>Twitter</h3>
+            <h3>Telegram</h3>
+            <h3>Facebook</h3>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/scripts/script.js"></script>
 </body>
 </html>

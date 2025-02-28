@@ -27,14 +27,42 @@
   <button id="close-cart">&times;</button>
   <h2>Your Cart</h2>
   <ul>
-    <li><img src="./assets/images/Mr-Muscle.png" alt="">Floor CLeaner <span>$9.98</span></li>
-    <li><img src="./assets/images/Mr-Muscle1.png" alt="">Breeze <span>$7.98</span></li>
-    <li><img src="./assets/images/Mr-Muscle2.png" alt="">Cloths CLeaner <span>$6.98</span></li>
+    <li>
+      <img src="./assets/images/Mr-Muscle.png" alt=""> Floor Cleaner
+      <div class="qty-container">
+        <button class="qty-btn minus">-</button>
+        <span class="qty">1</span>
+        <button class="qty-btn plus">+</button>
+      </div>
+      <span class="price">$9.98</span>
+
+    </li>
+
+    <li>
+      <img src="./assets/images/Mr-Muscle1.png" alt=""> Breeze
+      <div class="qty-container">
+        <button class="qty-btn minus">-</button>
+        <span class="qty">1</span>
+        <button class="qty-btn plus">+</button>
+      </div>
+      <span class="price">$7.98</span>
+    </li>
+
+    <li>
+      <img src="./assets/images/Mr-Muscle2.png" alt=""> Cloths Cleaner
+      <div class="qty-container">
+        <button class="qty-btn minus">-</button>
+        <span class="qty">1</span>
+        <button class="qty-btn plus">+</button>
+      </div>
+      <span class="price">$6.98</span>
+    </li>
   </ul>
   <hr>
-  <p><strong>Total: $20</strong></p>
+  <p><span>Total: </span><strong id="total-price">$0.00</strong></p>
   <button class="checkout-btn">Continue to Checkout</button>
 </div>
+
 
   <div class="slider">
     <div class="slider-container">
