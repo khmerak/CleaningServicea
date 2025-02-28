@@ -11,6 +11,7 @@ body{
     margin: 0 auto;
     width: 80%;
     letter-spacing: 1px;
+    text-wrap: wrap;
 }
 /* Home Page */
 header{
@@ -43,9 +44,13 @@ header nav ul li a{
     font-size: 16px;
     border-radius: 10px;
 }
+header nav ul li a img{
+    width: 35px;
+    margin-right: 5px;
+    margin-top: -5px;
+}
 header nav ul li a:hover{
-    background-color: #10669f;
-    color: white;
+    text-decoration: underline;
 }
 .login, .signup{
     padding: 5px 10px;
