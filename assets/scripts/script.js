@@ -64,4 +64,16 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll("nav ul li a");
+
+    links.forEach((link) => {
+        link.addEventListener("click", function () {
+            links.forEach((l) => l.classList.remove("active")); // Remove active class from all links
+            this.classList.add("active"); // Add active class to the clicked link
+        });
+    });
 });
