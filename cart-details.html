@@ -27,58 +27,103 @@
     <button id="close-cart">&times;</button>
     <h2>Your Cart</h2>
     <ul>
-        <li><a href="./cart-details.html"><img src="./assets/images/Mr-Muscle.png" alt="">Floor CLeaner <span>$9.98</span></a></li>
-        <li><a href="./cart-details.html"><img src="./assets/images/Mr-Muscle1.png" alt="">Breeze <span>$7.98</span></a></li>
-        <li><a href="./cart-details.html"><img src="./assets/images/Mr-Muscle2.png" alt="">Cloths CLeaner <span>$6.98</span></a></li>
+        <li>
+            <img src="./assets/images/Mr-Muscle.png" alt=""> <a href="/cart-details.html">Floor Cleaner</a>
+            <div class="qty-container">
+                <button class="qty-btn minus">-</button>
+                <span class="qty">1</span>
+                <button class="qty-btn plus">+</button>
+            </div>
+            <span class="price">$9.98</span>
+
+        </li>
+
+        <li>
+            <img src="./assets/images/Mr-Muscle1.png" alt=""> <a href="/cart-details.html">Breeze</a>
+            <div class="qty-container">
+                <button class="qty-btn minus">-</button>
+                <span class="qty">1</span>
+                <button class="qty-btn plus">+</button>
+            </div>
+            <span class="price">$7.98</span>
+        </li>
+
+        <li>
+            <img src="./assets/images/Mr-Muscle2.png" alt=""> <a href="/cart-details.html">Cloths Cleaner</a>
+            <div class="qty-container">
+                <button class="qty-btn minus">-</button>
+                <span class="qty">1</span>
+                <button class="qty-btn plus">+</button>
+            </div>
+            <span class="price">$6.98</span>
+        </li>
     </ul>
     <hr>
-    <p><strong>Total: $20</strong></p>
+    <p><span>Total: </span><strong id="total-price">$0.00</strong></p>
     <button class="checkout-btn">Continue to Checkout</button>
 </div>
-
-<div class="slider">
-    <div class="slider-container">
-        <div class="slider-item active">
-            <img src="/assets/images/portrait1.png" alt="Slide 1">
-            <div class="text">
-                <h2>We help you to keep your place clean</h2>
-                <p>We use specialized and quality equipment tools for cleaning.</p>
-                <a href="#">Contact Us</a>
+<main>
+    <h1>Product Details</h1>
+    <hr>
+    <div class="product-details">
+        <img src="assets/images/Mr-Muscle.png" alt="">
+        <div class="details">
+            <h2>Mr. Muscle</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad, consectetur dicta eaque, eius excepturi </p>
+            <div class="qty-details">
+                <h3>Qty:</h3>
+                <div class="qty-container">
+                    <button class="qty-btn minus">-</button>
+                    <span class="qty">1</span>
+                    <button class="qty-btn plus">+</button>
+                </div>
             </div>
-        </div>
-        <div class="slider-item">
-            <img src="/assets/images/portrait2.png" alt="Slide 2">
-            <div class="text">
-                <h2>Professional Cleaning Services</h2>
-                <p>Our team ensures your space stays spotless and hygienic.</p>
-                <a href="#">Learn More</a>
-            </div>
-        </div>
-        <div class="slider-item">
-            <img src="/assets/images/portrait3.png" alt="Slide 3">
-            <div class="text">
-                <h2>Reliable and Efficient</h2>
-                <p>Experience the best cleaning solutions tailored to your needs.</p>
-                <a href="#">Get Started</a>
-            </div>
-        </div>
-        <div class="slider-item">
-            <img src="/assets/images/portrait4.png" alt="Slide 4">
-            <div class="text">
-                <h2>Clean Spaces, Happy Faces</h2>
-                <p>We prioritize cleanliness for a healthier environment.</p>
-                <a href="#">Book Now</a>
-            </div>
+            <strong>price: <span>$9.98</span></strong>
+            <button class="checkout-btn">Continue to Checkout</button>
         </div>
     </div>
+    <hr>
+    <h3>Product Related</h3>
+    <div class="product-related">
+        <div class="product">
+            <img src="/assets/images/Mr-Muscle1.png" alt="">
+            <h3>Mr. Muscle</h3>
+        </div>
+        <div class="product">
+            <img src="/assets/images/Mr-Muscle2.png" alt="">
+            <h3>Mr. Muscle</h3>
+        </div>
+        <div class="product">
+            <img src="/assets/images/Mr-Muscle3.png" alt="">
+            <h3>Mr. Muscle</h3>
+        </div>
+        <div class="product">
+            <img src="/assets/images/Mr-Muscle4.png" alt="">
+            <h3>Mr. Muscle</h3>
+        </div>
+        <div class="product">
+            <img src="/assets/images/Mr-Muscle5.png" alt="">
+            <h3>Mr. Muscle</h3>
+        </div>
+        <div class="product">
+            <img src="/assets/images/Mr-Muscle2.png" alt="">
+            <h3>Mr. Muscle</h3>
+        </div>
+        <div class="product">
+            <img src="/assets/images/Mr-Muscle3.png" alt="">
+            <h3>Mr. Muscle</h3>
+        </div>
+        <div class="product">
+            <img src="/assets/images/Mr-Muscle4.png" alt="">
+            <h3>Mr. Muscle</h3>
+        </div>
+        <div class="product">
+            <img src="/assets/images/Mr-Muscle5.png" alt="">
+            <h3>Mr. Muscle</h3>
+        </div>
+    </div>
+</main>
 
-    <!-- Navigation Buttons -->
-    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-    <button class="next" onclick="changeSlide(1)">&#10095;</button>
-
-    <!-- Dots -->
-    <div class="dots"></div>
-</div>
 
 
 <footer>

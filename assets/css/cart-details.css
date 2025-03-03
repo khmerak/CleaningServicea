@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0 auto;
+    width: 80%;
+    letter-spacing: 1px;
+    text-wrap: wrap;
+}
+/* Home Page */
+header{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+}
+header .logo_name img{
+    width: 200px;
+}
+header nav ul{
+    display: flex;
+
+    padding: 20px;
+    gap: 40px;
+}
+header nav ul li{
+    list-style: none;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    position: relative;
+    font-style: normal;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000; /* Underline color */
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: 100%;
+}
+header nav ul li a img{
+    width: 35px;
+    margin-right: 5px;
+    margin-top: -5px;
+}
+.login, .signup{
+    padding: 5px 10px;
+    background: #10669f;
+    border-radius: 30px;
+    color: #fff;
+}
+
+.cart-sidebar {
+    position: fixed;
+    right: -400px; /* Initially hidden */
+    top: 0;
+    width: 400px;
+    height: 100%;
+    background: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    z-index: 1;
+}
+
+.cart-sidebar h2 {
+    color: #10669f;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cart-sidebar hr {
+    border: 1px solid #0056b3;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.cart-sidebar ul li {
+    list-style: none;
+    margin-bottom: 10px;
+    border: 1px solid #10669f;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-sidebar ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #10669f;
+    width: 100%;
+}
+
+.cart-sidebar ul li img {
+    width: 40px;
+}
+
+.cart-sidebar p {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.cart-sidebar p span {
+    font-weight: 700;
+}
+
+.cart-sidebar p strong {
+    color: red;
+    font-weight: 400;
+}
+
+.cart-sidebar.active {
+    right: 0; /* Show sidebar */
+}
+
+#close-cart {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.checkout-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background: #10669f;
+    color: white;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.checkout-btn:hover {
+    background: #0056b3;
+}
+
+/* Quantity Selector */
+.qty-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.qty-btn {
+    background: #10669f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 30px;
+    text-align: center;
+}
+
+.qty-btn:hover {
+    background: #0056b3;
+}
+
+.qty {
+    margin: 0 10px;
+    font-size: 16px;
+    width: 30px;
+    text-align: center;
+}
+
+main h1{
+    text-align: center;
+    font-size: 90px;
+
+    font-family: 'Dancing Script', cursive;
+}
+main hr{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 2px solid #10669f;
+}
+main .product-details{
+    margin: 10px auto;
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+main .product-details img{
+    width: 50%;
+    margin-right: 10px;
+    padding: 10px;
+}
+main .product-details .details h2{
+    margin-top: 4px;
+    color: #10669f;
+    margin-bottom: 10px;
+}
+main .product-details .details span{
+    color: #10669f;
+}
+main .product-details .qty-details{
+    display: flex;
+    padding: 20px 0;
+}
+main .product-related h3{
+    text-align: center;
+}
+
+main .product-related {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 10px;
+    padding-bottom: 5px;
+}
+
+/* Webkit Scrollbar Styling */
+main .product-related::-webkit-scrollbar {
+    height: 8px;
+}
+
+main .product-related::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+main .product-related::-webkit-scrollbar-thumb {
+    background: #0056b3;
+    border-radius: 5px;
+}
+
+main .product-related::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+main .product {
+    min-width: 200px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #10669f;
+}
+
+
+
+
+
+
+
+footer{
+    background: #10669f;
+    margin-top: 30px;
+    height: 688px;
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+footer .on {
+    display: block;
+}
+footer .on img {
+    width: 20%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+footer .on h1{
+    font-size: 35px;
+    color: #ffffff;
+    margin-top: 1px;
+    font-weight: 400;
+}
+footer .on h3{
+    color: #ffffff;
+    font-weight: 200;
+    margin-bottom: 40px;
+}
+footer .on a{
+    color: #10669f;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 30px;
+}
+footer .up{
+    border-top: 2px solid #ffffff;
+    margin: 50px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #ffffff;
+}
+footer .up .menu, .contact, .social{
+    display: block;
+    text-align: start;
+}
+footer .up .menu h1, .contact h1, .social h1{
+    font-weight: 400;
+}
+footer .up .menu h3, .contact h3, .social h3{
+    font-weight: 200;
+}
