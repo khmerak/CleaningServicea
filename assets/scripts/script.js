@@ -77,3 +77,29 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Simulated user authentication (Replace with real authentication logic)
+    let isLoggedIn = localStorage.getItem("isLoggedIn");
+
+    if (isLoggedIn === "true") {
+        document.getElementById("cart-item").style.display = "block";
+        document.getElementById("profile-item").style.display = "block";
+        document.getElementById("login-item").style.display = "none";
+        document.getElementById("signup-item").style.display = "none";
+    } else {
+        document.getElementById("cart-item").style.display = "none";
+        document.getElementById("profile-item").style.display = "none";
+        document.getElementById("login-item").style.display = "block";
+        document.getElementById("signup-item").style.display = "block";
+    }
+});
+
+function logout() {
+    localStorage.setItem("isLoggedIn", "false"); // Clear login status
+    location.reload(); // Reload page to update menu
+}
+

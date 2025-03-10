@@ -23,7 +23,7 @@
 
     <p class="or">Or</p>
 
-    <form action="index.html" method="POST">
+    <form id="login-form">
       <input type="text" name="username" id="username" placeholder="Username" required>
       <input type="password" name="password" id="password" placeholder="Password" required>
 
@@ -43,6 +43,29 @@
   <img src="assets/images/sreysart.png" alt="House Cleaning Services" class="sreysart">
 </div>
 
-<script src="script.js"></script>
+<script>
+  document.getElementById("login-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Simulated login check (Replace with real authentication logic)
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+    let remember = document.getElementById("remember").checked;
+
+    if (username === "admin" && password === "admin123") { // Example credentials
+      if (remember) {
+        localStorage.setItem("isLoggedIn", "true"); // Keep login state
+      } else {
+        sessionStorage.setItem("isLoggedIn", "true"); // Temporary login
+      }
+
+      alert("Login successful!");
+      window.location.href = "index.html"; // Redirect to homepage
+    } else {
+      alert("Invalid username or password!");
+    }
+  });
+</script>
+
 </body>
 </html>
