@@ -1,0 +1,172 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    transition: transform 0.3s ease-in-out;
+}
+
+.arrow{
+    position: absolute;
+    z-index: 1;
+    top: 14%;
+    left: 28%;
+    text-decoration: none;
+    font-size: 25px;
+    color: #0056b3;
+}
+
+/* Register Container */
+.register-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    width: 900px;
+    max-width: 100%;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Register Box */
+.register-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.logo {
+    width: 180px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+span {
+    color: #1E6699;
+}
+
+.txt1 {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #F0F0F0;
+    font-size: 16px;
+}
+
+::placeholder {
+    color: #666;
+}
+
+/* Checkbox */
+.check {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.check input {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Register Button */
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #1E6699;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #15507a;
+}
+
+/* Links */
+.txt2 {
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.lco {
+    color: #1E6699;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.lco:hover {
+    text-decoration: underline;
+}
+
+/* Right-Side Image */
+.sreysart {
+    width: 350px;
+    border-radius: 20px;
+    margin-left: 40px;
+}
+.txt4 {
+    position: absolute;
+    top: 13%;
+    left: 69%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+@media (max-width: 768px) {
+    .register-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .sreysart {
+        display: none;
+    }
+
+    .register-box {
+        max-width: 100%;
+    }
+}
+
+.cursor {
+    color: #1E6699;
+    font-weight: bold;
+    animation: blink 0.6s infinite;
+}
