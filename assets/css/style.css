@@ -55,7 +55,7 @@ nav ul li a::after {
     width: 0;
     height: 2px;
     background-color: #000; /* Underline color */
-    transition: width 0.3s ease-in-out;
+    transition: width 0.5s ease-in-out;
 }
 
 nav ul li a:hover::after,
@@ -83,7 +83,7 @@ header nav ul li a img{
     background: white;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    transition: right 0.3s ease-in-out;
+    transition: right 0.5s ease-in-out;
     font-family: 'Poppins', sans-serif;
     z-index: 1;
 }

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="assets/css/contact.css">
 
 </head>
@@ -18,12 +18,51 @@
             <li><a href="service.html">Services</a></li>
             <li><a href="products.html">products</a></li>
             <li><a href="contact.html">contact us</a></li>
-            <li><a href="#"><img src="assets/images/cart-icon-28344 9.png" alt=""></a></li>
+            <li><a href="#" id="cart-icon"><img src="assets/images/cart-icon-28344 9.png" alt=""></a></li>
             <li><a href="#" class="login">login</a></li>
             <li><a href="#" class="signup">sign up</a></li>
         </ul>
     </nav>
 </header>
+<div id="cart-sidebar" class="cart-sidebar">
+    <button id="close-cart">&times;</button>
+    <h2>Your Cart</h2>
+    <ul>
+        <li>
+            <img src="./assets/images/Mr-Muscle.png" alt=""> <a href="/cart-details.html">Floor Cleaner</a>
+            <div class="qty-container">
+                <button class="qty-btn minus">-</button>
+                <span class="qty">1</span>
+                <button class="qty-btn plus">+</button>
+            </div>
+            <span class="price">$9.98</span>
+
+        </li>
+
+        <li>
+            <img src="./assets/images/Mr-Muscle1.png" alt=""> <a href="/cart-details.html">Breeze</a>
+            <div class="qty-container">
+                <button class="qty-btn minus">-</button>
+                <span class="qty">1</span>
+                <button class="qty-btn plus">+</button>
+            </div>
+            <span class="price">$7.98</span>
+        </li>
+
+        <li>
+            <img src="./assets/images/Mr-Muscle2.png" alt=""> <a href="/cart-details.html">Cloths Cleaner</a>
+            <div class="qty-container">
+                <button class="qty-btn minus">-</button>
+                <span class="qty">1</span>
+                <button class="qty-btn plus">+</button>
+            </div>
+            <span class="price">$6.98</span>
+        </li>
+    </ul>
+    <hr>
+    <p><span>Total: </span><strong id="total-price">$0.00</strong></p>
+    <button class="checkout-btn">Continue to Checkout</button>
+</div>
 <main>
     <div class="about">
         <img src="/assets/images/zarla1.png" alt="about us">
@@ -186,4 +225,5 @@
     </div>
 </footer>
 </body>
+<script src="assets/scripts/script.js"></script>
 </html>
