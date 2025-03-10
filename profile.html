@@ -7,6 +7,7 @@
 </head>
 <body>
     <div class="wrapper">
+        <a class="arrow" href="index.html">&larr;</a>
         <div class="profile">
             <div class="profile-image">
                 <img src="assets/images/park%20gyuyoung.jpg" alt="">
@@ -39,22 +40,46 @@
             </div>
             <div class="profile-details">
                 <h2>More Information</h2>
-                <div class="table">
-                    <table>
-                        <tr>
-                            <td>History Booking</td>
-                            <td> > </td>
-                        </tr>
-                        <tr>
-                            <td>History Orders</td>
-                            <td> > </td>
-                        </tr>
-                        <tr>
-                            <td>Reset Password</td>
-                            <td> > </td>
-                        </tr>
-                    </table>
-                </div>
+                <table>
+                    <tr onclick="toggleDropdown('booking')">
+                        <td>History Booking</td>
+                        <td> > </td>
+                    </tr>
+                    <tr id="booking" class="dropdown-content">
+                        <td colspan="2">
+                            <strong>Booking Details:</strong><br>
+                            - Date: 10 March 2025<br>
+                            - Status: Confirmed<br>
+                            - Location: Phnom Penh
+                        </td>
+                    </tr>
+
+                    <tr onclick="toggleDropdown('orders')">
+                        <td>History Orders</td>
+                        <td> > </td>
+                    </tr>
+                    <tr id="orders" class="dropdown-content">
+                        <td colspan="2">
+                            <strong>Order Details:</strong><br>
+                            - Order ID: #12345<br>
+                            - Item: Cleaning Supplies<br>
+                            - Total: $50
+                        </td>
+                    </tr>
+
+                    <tr onclick="toggleDropdown('password')">
+                        <td>Reset Password</td>
+                        <td> > </td>
+                    </tr>
+                    <tr id="password" class="dropdown-content">
+                        <td colspan="2">
+                            <strong>Password Reset Instructions:</strong><br>
+                            - Click "Forgot Password" on the login page.<br>
+                            - Check your email for a reset link.<br>
+                            - Follow the instructions to reset your password.
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
@@ -83,6 +108,10 @@
         }
     });
 
+    function toggleDropdown(id) {
+        let row = document.getElementById(id);
+        row.style.display = row.style.display === "table-row" ? "none" : "table-row";
+    }
 
 </script>
 </html>

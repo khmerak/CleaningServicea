@@ -103,3 +103,9 @@ function logout() {
     location.reload(); // Reload page to update menu
 }
 
+window.onload = function () {
+    setTimeout(() => {
+        document.getElementById("loader").style.display = "none";
+        document.body.style.overflow = "auto";
+    }, 3000); // Simulate loading time (2 seconds)
+};
