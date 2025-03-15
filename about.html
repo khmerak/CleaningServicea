@@ -11,15 +11,22 @@
         <a href="index.html"><img src="assets/images/logocleaning.png" alt=""></a>
     </div>
     <nav>
-        <ul>
+        <ul id="nav-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About us</a></li>
             <li><a href="service.html">Services</a></li>
-            <li><a href="products.html">products</a></li>
-            <li><a href="contact.html">contact us</a></li>
-            <li><a href="#" id="cart-icon"><img src="assets/images/cart-icon-28344 9.png" alt=""></a></li>
-            <li><a href="login.html" class="login">login</a></li>
-            <li><a href="signup.html" class="signup">sign up</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li id="cart-item" style="display: none;"><a href="#" id="cart-icon"><img src="assets/images/cart-icon-28344 9.png" alt="Cart"></a></li>
+            <li id="login-item"><a href="login.html" class="login">Login</a></li>
+            <li id="signup-item"><a href="signup.html" class="signup">Sign up</a></li>
+            <li class="user-profile" id="profile-item" style="display: none;">
+                <a href="#"><img src="assets/images/image.png" alt="User"></a>
+                <ul class="dropdown">
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="#" onclick="logout()">Logout</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
 </header>

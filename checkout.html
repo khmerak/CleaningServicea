@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>checkout</title>
+  <link rel="stylesheet" href="assets/css/checkout.css">
+</head>
+<body>
+    <div id="wrapper">
+      <h2>You've come a long way, BABY!</h2>
+      <div class="detail">
+        <form action="#" method="post">
+          <h3><span>1</span> Personal information</h3>
+          <div id="field">
+            <div class="field-firstname">
+              <div><label for="firstname">firstname</label></div>
+              <input type="text" id="firstname" name="firstname" placeholder="firstname" required>
+            </div>
+            <div class="field-lastname">
+              <div><label for="lastname">lastname</label></div>
+              <input type="text" id="lastname" name="lastname" placeholder="lastname" required>
+            </div>
+          </div>
+          <div id="field-email">
+            <div><label for="email">email</label></div>
+            <input type="email" id="email" name="email" placeholder="email" required>
+          </div>
+          <div id="field-address">
+            <div><label for="address">Address</label></div>
+            <input type="text" id="address" name="address" placeholder="address" required>
+          </div>
+          <div id="field-phone">
+            <div><label for="phone">Phone</label></div>
+            <input type="text" id="phone" name="phone" placeholder="(+123) 34 324 245" required>
+          </div>
+          <h3><span>2</span> paymaent details icon</h3>
+          <div class="payment-details">
+            <div class="field-payment">
+              <div><label for="payment">Credit Card Number</label></div>
+              <input type="text" id="payment" name="payment" placeholder="credit card number" required>
+            </div>
+          </div>
+          <div class="secure">
+            <div class="field-security">
+              <div><label for="security">security code</label></div>
+              <input type="password" id="security" name="security" placeholder="security code" required>
+            </div>
+            <div class="field-expire">
+              <div><label for="date">expire</label></div>
+              <input type="date" id="date" name="date" placeholder="MM/DD/YYYY" required>
+            </div>
+          </div>
+          <button type="submit">submit</button>
+        </form>
+        <div class="ordered">
+          <h3>your ordered</h3>
+          <table>
+            <tr>
+              <th>Apple wacht</th>
+              <th>$ 580.00</th>
+            </tr>
+            <tr>
+              <th>Microsoft Wacht</th>
+              <th>$ 580.00</th>
+            </tr>
+            <tr>
+              <th>total purchase</th>
+              <th>$ 580.00</th>
+            </tr>
+            <tr>
+              <th>estimate tax</th>
+              <th>$ 0.00</th>
+            </tr>
+            <tr>
+              <th>total</th>
+              <th>$ 1,000.00</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

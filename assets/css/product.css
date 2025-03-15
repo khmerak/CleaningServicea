@@ -45,6 +45,47 @@ header nav ul li a{
     border-radius: 10px;
 }
 
+nav ul li img {
+    width: 70px;
+    height: 35px;
+    border-radius: 60%;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.user-profile {
+    position: relative;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 37px;
+    left: -50px;
+    z-index: 1;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.dropdown li {
+    list-style: none;
+}
+
+
+.dropdown li a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.5s;
+    text-align: center;
+}
+.user-profile:hover .dropdown {
+    display: block;
+}
 
 nav ul li a::after {
     content: "";
