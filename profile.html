@@ -1,117 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Profile User</title>
-    <link rel="stylesheet" href="assets/css/profile.css">
-</head>
-<body>
+    <link rel="stylesheet" href="assets/css/profile.css" />
+  </head>
+  <body>
     <div class="wrapper">
-        <a class="arrow" href="index.html">&larr;</a>
-        <div class="profile">
-            <div class="profile-image">
-                <img src="assets/images/park%20gyuyoung.jpg" alt="">
-                <h2>Name: Park Gyuyoung</h2>
-                <h3>Phone: +233 89 422 233</h3>
-                <h3>Address: Korea</h3>
-                <div class="edit">
-                    <a href="#" id="editButton">Edit Your Profile<h1> > </h1></a>
-                </div>
-            </div>
-
-            <!-- Modal (pop-up) form -->
-            <div class="modal" id="editModal">
-                <div class="modal-content">
-                    <span class="close" id="closeModal">&times;</span>
-                    <h2>Edit Your Profile</h2>
-                    <form>
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" value="Park Gyuyoung">
-
-                        <label for="phone">Phone:</label>
-                        <input type="text" id="phone" name="phone" value="+233 89 422 233">
-
-                        <label for="address">Address:</label>
-                        <input type="text" id="address" name="address" value="Korea">
-
-                        <button type="submit">Save</button>
-                    </form>
-                </div>
-            </div>
-            <div class="profile-details">
-                <h2>More Information</h2>
-                <table>
-                    <tr onclick="toggleDropdown('booking')">
-                        <td>History Booking</td>
-                        <td> > </td>
-                    </tr>
-                    <tr id="booking" class="dropdown-content">
-                        <td colspan="2">
-                            <strong>Booking Details:</strong><br>
-                            - Date: 10 March 2025<br>
-                            - Status: Confirmed<br>
-                            - Location: Phnom Penh
-                        </td>
-                    </tr>
-
-                    <tr onclick="toggleDropdown('orders')">
-                        <td>History Orders</td>
-                        <td> > </td>
-                    </tr>
-                    <tr id="orders" class="dropdown-content">
-                        <td colspan="2">
-                            <strong>Order Details:</strong><br>
-                            - Order ID: #12345<br>
-                            - Item: Cleaning Supplies<br>
-                            - Total: $50
-                        </td>
-                    </tr>
-
-                    <tr onclick="toggleDropdown('password')">
-                        <td>Reset Password</td>
-                        <td> > </td>
-                    </tr>
-                    <tr id="password" class="dropdown-content">
-                        <td colspan="2">
-                            <strong>Password Reset Instructions:</strong><br>
-                            - Click "Forgot Password" on the login page.<br>
-                            - Check your email for a reset link.<br>
-                            - Follow the instructions to reset your password.
-                        </td>
-                    </tr>
-                </table>
-            </div>
+      <a class="arrow" href="index.html">&larr;</a>
+      <div class="profile">
+        <div class="profile-image">
+          <img src="assets/images/park%20gyuyoung.jpg" alt="" />
+          <h2>Name: Park Gyuyoung</h2>
+          <h3>Phone: +233 89 422 233</h3>
+          <h3>Address: Korea</h3>
         </div>
+
+        <div class="profile-details">
+          <h2>More Information</h2>
+          <table>
+            <tr onclick="toggleDropdown('profile')">
+              <td>Edit Your Profile</td>
+              <td>></td>
+            </tr>
+            <tr id="profile" class="dropdown-content">
+              <td colspan="2">
+                <form action="reset_password.php" method="POST">
+                  <div class="field">
+                    <label for="name">Name:</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value="Park Gyuyoung"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="phone">Phone:</label>
+                    <input
+                      type="text"
+                      id="phone"
+                      name="phone"
+                      value="+233 89 422 233"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="address">Address:</label>
+                    <input
+                      type="text"
+                      id="address"
+                      name="address"
+                      value="Korea"
+                    />
+                  </div>
+                  <button type="submit">Reset Password</button>
+                </form>
+              </td>
+            </tr>
+            <tr onclick="toggleDropdown('booking')">
+                <td>History Booking</td>
+                <td>></td>
+              </tr>
+              <tr id="booking" class="dropdown-content">
+                <td colspan="2">
+                  <table class="inner-table">
+                    <tr>
+                      <th>Booking ID</th>
+                      <th>Type Room</th>
+                      <th>size</th>
+                      <th>Price</th>
+                      <th>Location</th>
+                      <th>Status</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Single Room</td>
+                      <td>11m(2)</td>
+                      <td>$100</td>
+                      <td>Accra</td>
+                      <td>Confirmed</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Double Room</td>
+                      <td>21m(2)</td>
+                      <td>$200</td>
+                      <td>Kumasi</td>
+                      <td>Confirmed</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            <tr onclick="toggleDropdown('orders')">
+              <td>History Orders</td>
+              <td>></td>
+            </tr>
+            <tr id="orders" class="dropdown-content">
+              <td colspan="2">
+                <table class="inner-table">
+                  <tr>
+                    <th>Order ID</th>
+                    <th>item</th>
+                    <th>Price</th>
+                    <th>Quantities</th>
+                    <th>Total</th>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Shirt</td>
+                    <td>$20</td>
+                    <td>2</td>
+                    <td>$40</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Shoes</td>
+                    <td>$50</td>
+                    <td>1</td>
+                    <td>$50</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr onclick="toggleDropdown('password')">
+              <td>Reset Password</td>
+              <td>></td>
+            </tr>
+            <tr id="password" class="dropdown-content">
+              <td colspan="2">
+                <form action="reset_password.php" method="POST">
+                  <div class="field">
+                    <label for="old_password">Old Password</label><br />
+                    <input
+                      type="password"
+                      name="old_password"
+                      placeholder="Enter Old Password"
+                      required
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="new_password">New Password</label><br />
+                    <input
+                      type="password"
+                      name="new_password"
+                      placeholder="Enter New Password"
+                      required
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="confirm_password">Confirm New Password</label
+                    ><br />
+                    <input
+                      type="password"
+                      name="confirm_password"
+                      placeholder="Confirm New Password"
+                      required
+                    />
+                  </div>
+                  <button type="submit">Reset Password</button>
+                </form>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
     </div>
-</body>
-<script >
-    // Get the modal and buttons
-    var modal = document.getElementById("editModal");
-    var editButton = document.getElementById("editButton");
-    var closeModal = document.getElementById("closeModal");
-
-    // Open the modal when the "Edit Your Profile" link is clicked
-    editButton.addEventListener("click", function(event) {
-        event.preventDefault(); // Prevent the default anchor link action
-        modal.style.display = "block";
-    });
-
-    // Close the modal when the "×" button is clicked
-    closeModal.addEventListener("click", function() {
-        modal.style.display = "none";
-    });
-
-    // Close the modal if the user clicks outside of the modal content
-    window.addEventListener("click", function(event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    });
+  </body>
+  <script>
 
     function toggleDropdown(id) {
-        let row = document.getElementById(id);
-        row.style.display = row.style.display === "table-row" ? "none" : "table-row";
+      let row = document.getElementById(id);
+      row.style.display =
+        row.style.display === "table-row" ? "none" : "table-row";
     }
-
-</script>
+  </script>
 </html>

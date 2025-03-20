@@ -109,3 +109,20 @@ window.onload = function () {
         document.body.style.overflow = "auto";
     }, 3000); // Simulate loading time (2 seconds)
 };
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const categoryButton = document.querySelector(".categories button");
+    const categoryNav = document.querySelector(".categories nav");
+
+    categoryButton.addEventListener("click", function () {
+        categoryNav.classList.toggle("active");
+    });
+
+    // Close menu if clicked outside
+    document.addEventListener("click", function (event) {
+        if (!categoryButton.contains(event.target) && !categoryNav.contains(event.target)) {
+            categoryNav.classList.remove("active");
+        }
+    });
+});

@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width: 80%;
+    margin: 90px auto;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+header h2{
+    font-size: 30px;
+    font-weight: 500;
+}
+header .breadcrumb{
+    display: flex;
+    align-items: center;
+    gap: 10PX;
+}
+header .breadcrumb ul {
+    display: flex;
+    gap: 20px;
+}
+header ul li {
+    color: #10669f;
+    list-style: none;
+}
+header ul li a{
+    color: #10669f;
+    text-decoration: none;
+
+}
+main{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.table-left {
+    width: 90%;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.table-left table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-left td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.table-left img {
+    width: 50px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.table-left input {
+    width: calc(100% - 20px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.table-left button {
+    padding: 8px 12px;
+    width: 100%;
+    background-color: #10669f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.table-right {
+    width: 70%;
+    margin: 20px;
+    border: 1px solid;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+.table-right table{
+    width: 100%;
+}
+.table-right td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+.table-right button {
+    padding: 8px 12px;
+    width: 100%;
+    background-color: #10669f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
