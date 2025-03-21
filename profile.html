@@ -6,11 +6,18 @@
     <link rel="stylesheet" href="assets/css/profile.css" />
   </head>
   <body>
+    
+    <div id="imageModal" class="modal">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <img class="modal-content" id="img01" src="/assets/images/park gyuyoung.jpg" />
+    </div>
     <div class="wrapper">
       <a class="arrow" href="index.html">&larr;</a>
       <div class="profile">
         <div class="profile-image">
-          <img src="assets/images/park%20gyuyoung.jpg" alt="" />
+          <div class="profile-image">
+            <img src="assets/images/park%20gyuyoung.jpg" alt="Profile Image" onclick="showPopup()" />
+          </div>
           <h2>Name: Park Gyuyoung</h2>
           <h3>Phone: +233 89 422 233</h3>
           <h3>Address: Korea</h3>
@@ -25,7 +32,7 @@
             </tr>
             <tr id="profile" class="dropdown-content">
               <td colspan="2">
-                <form action="reset_password.php" method="POST">
+                <form action="" method="POST">
                   <div class="field">
                     <label for="name">Name:</label>
                     <input
@@ -58,39 +65,39 @@
               </td>
             </tr>
             <tr onclick="toggleDropdown('booking')">
-                <td>History Booking</td>
-                <td>></td>
-              </tr>
-              <tr id="booking" class="dropdown-content">
-                <td colspan="2">
-                  <table class="inner-table">
-                    <tr>
-                      <th>Booking ID</th>
-                      <th>Type Room</th>
-                      <th>size</th>
-                      <th>Price</th>
-                      <th>Location</th>
-                      <th>Status</th>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Single Room</td>
-                      <td>11m(2)</td>
-                      <td>$100</td>
-                      <td>Accra</td>
-                      <td>Confirmed</td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Double Room</td>
-                      <td>21m(2)</td>
-                      <td>$200</td>
-                      <td>Kumasi</td>
-                      <td>Confirmed</td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
+              <td>History Booking</td>
+              <td>></td>
+            </tr>
+            <tr id="booking" class="dropdown-content">
+              <td colspan="2">
+                <table class="inner-table">
+                  <tr>
+                    <th>Booking ID</th>
+                    <th>Type Room</th>
+                    <th>size</th>
+                    <th>Price</th>
+                    <th>Location</th>
+                    <th>Status</th>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Single Room</td>
+                    <td>11m(2)</td>
+                    <td>$100</td>
+                    <td>Accra</td>
+                    <td>Confirmed</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Double Room</td>
+                    <td>21m(2)</td>
+                    <td>$200</td>
+                    <td>Kumasi</td>
+                    <td>Confirmed</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
             <tr onclick="toggleDropdown('orders')">
               <td>History Orders</td>
               <td>></td>
@@ -166,13 +173,20 @@
         </div>
       </div>
     </div>
+    
   </body>
   <script>
-
     function toggleDropdown(id) {
       let row = document.getElementById(id);
       row.style.display =
         row.style.display === "table-row" ? "none" : "table-row";
+    }
+    function showPopup() {
+      document.getElementById("imageModal").style.display = "block";
+    }
+
+    function closePopup() {
+      document.getElementById("imageModal").style.display = "none";
     }
   </script>
 </html>

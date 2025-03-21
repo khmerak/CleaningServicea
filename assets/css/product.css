@@ -73,6 +73,28 @@ nav ul li img {
 .dropdown li {
   list-style: none;
 }
+#telegram-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #0088cc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+#telegram-popup:hover {
+  transform: scale(1.1);
+}
+#telegram-popup i {
+  font-size: 30px;
+  color: white;
+}
 
 .dropdown li a {
   display: block;
@@ -85,7 +107,18 @@ nav ul li img {
 .user-profile:hover .dropdown {
   display: block;
 }
-
+.cart-badge {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 50%;
+  display: block; 
+}
 nav ul li a::after {
   content: "";
   position: absolute;

@@ -13,6 +13,28 @@ body{
     letter-spacing: 1px;
     text-wrap: wrap;
 }
+#telegram-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #0088cc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+#telegram-popup:hover {
+    transform: scale(1.1);
+}
+#telegram-popup i {
+    font-size: 30px;
+    color: white;
+}
 /* Home Page */
 header{
     height: 100px;
@@ -46,6 +68,47 @@ header nav ul li a{
     border-radius: 10px;
 }
 
+nav ul li img {
+    width: 70px;
+    height: 35px;
+    border-radius: 60%;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.user-profile {
+    position: relative;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 37px;
+    left: -50px;
+    z-index: 1;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.dropdown li {
+    list-style: none;
+}
+
+
+.dropdown li a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.5s;
+    text-align: center;
+}
+.user-profile:hover .dropdown {
+    display: block;
+}
 
 nav ul li a::after {
     content: "";
@@ -73,7 +136,18 @@ header nav ul li a img{
     border-radius: 30px;
     color: #fff;
 }
-
+.cart-badge {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 50%;
+    display: block; 
+  }
 .cart-sidebar {
     position: fixed;
     right: -400px; /* Initially hidden */
@@ -154,22 +228,18 @@ header nav ul li a img{
     cursor: pointer;
 }
 
-.checkout-btn {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
+.add-to-cart{
     background: #10669f;
     color: white;
+    padding: 10px 20px;
     border: none;
-    font-family: 'Poppins', sans-serif;
+    border-radius: 30px;
     cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
     text-align: center;
-    margin-bottom: 20px;
-}
-
-.checkout-btn:hover {
-    background: #0056b3;
 }
 
 /* Quantity Selector */

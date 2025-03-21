@@ -1,216 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Product</title>
-    <link rel="stylesheet" href="assets/css/product.css">
-</head>
-<body>
-<header>
-    <div class="logo_name">
-        <a href="index.html"><img src="assets/images/logocleaning.png" alt=""></a>
-    </div>
-    <nav>
+    <link rel="stylesheet" href="assets/css/product.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  </head>
+  <body>
+    <header>
+      <div class="logo_name">
+        <a href="index.html"
+          ><img src="assets/images/logocleaning.png" alt=""
+        /></a>
+      </div>
+      <nav>
         <ul id="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About us</a></li>
-            <li><a href="service.html">Services</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="contact.html">Contact us</a></li>
-            <li id="cart-item" style="display: none;"><a href="#" id="cart-icon"><img src="assets/images/cart-icon-28344 9.png" alt="Cart"></a></li>
-            <li id="login-item"><a href="login.html" class="login">Login</a></li>
-            <li id="signup-item"><a href="signup.html" class="signup">Sign up</a></li>
-            <li class="user-profile" id="profile-item" style="display: none;">
-                <a href="#"><img src="assets/images/image.png" alt="User"></a>
-                <ul class="dropdown">
-                    <li><a href="profile.html">Profile</a></li>
-                    <li><a href="#" onclick="logout()">Logout</a></li>
-                </ul>
-            </li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li id="cart-item" style="display: none; position: relative;">
+            <a href="#" id="cart-icon">
+                <img src="assets/images/cart-icon-28344 9.png" alt="Cart">
+                <span id="cart-count" class="cart-badge">0</span>
+            </a>
+        </li>
+          <li id="login-item"><a href="login.html" class="login">Login</a></li>
+          <li id="signup-item"><a href="signup.html" class="signup">Sign up</a></li>
+          <li class="user-profile" id="profile-item" style="display: none;">
+            <a href="#"><img src="assets/images/image.png" alt="User"></a>
+            <ul class="dropdown">
+              <li><a href="profile.html">Profile</a></li>
+              <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+          </li>
         </ul>
-    </nav>
-</header>
-<div id="cart-sidebar" class="cart-sidebar">
-    <button id="close-cart">&times;</button>
-    <h2>Your Cart</h2>
-    <ul>
+      </nav>
+    </header>
+    <div id="telegram-popup">
+        <a href="https://t.me/khemrak53" target="_blank">
+            <i class="fa-brands fa-telegram"></i>
+        </a>
+      </div>
+    <div id="cart-sidebar" class="cart-sidebar">
+      <button id="close-cart">&times;</button>
+      <h2>Your Cart</h2>
+      <ul>
         <li>
-            <img src="./assets/images/Mr-Muscle.png" alt=""> <a href="/cart-details.html">Floor Cleaner</a>
-            <div class="qty-container">
-                <button class="qty-btn minus">-</button>
-                <span class="qty">1</span>
-                <button class="qty-btn plus">+</button>
-            </div>
-            <span class="price">$9.98</span>
-
+          <img src="./assets/images/Mr-Muscle.png" alt="" />
+          <a href="/cart-details.html">Floor Cleaner</a>
+          <div class="qty-container">
+            <button class="qty-btn minus">-</button>
+            <span class="qty">1</span>
+            <button class="qty-btn plus">+</button>
+          </div>
+          <span class="price">$9.98</span>
         </li>
 
         <li>
-            <img src="./assets/images/Mr-Muscle1.png" alt=""> <a href="/cart-details.html">Breeze</a>
-            <div class="qty-container">
-                <button class="qty-btn minus">-</button>
-                <span class="qty">1</span>
-                <button class="qty-btn plus">+</button>
-            </div>
-            <span class="price">$7.98</span>
+          <img src="./assets/images/Mr-Muscle1.png" alt="" />
+          <a href="/cart-details.html">Breeze</a>
+          <div class="qty-container">
+            <button class="qty-btn minus">-</button>
+            <span class="qty">1</span>
+            <button class="qty-btn plus">+</button>
+          </div>
+          <span class="price">$7.98</span>
         </li>
 
         <li>
-            <img src="./assets/images/Mr-Muscle2.png" alt=""> <a href="/cart-details.html">Cloths Cleaner</a>
-            <div class="qty-container">
-                <button class="qty-btn minus">-</button>
-                <span class="qty">1</span>
-                <button class="qty-btn plus">+</button>
-            </div>
-            <span class="price">$6.98</span>
+          <img src="./assets/images/Mr-Muscle2.png" alt="" />
+          <a href="/cart-details.html">Cloths Cleaner</a>
+          <div class="qty-container">
+            <button class="qty-btn minus">-</button>
+            <span class="qty">1</span>
+            <button class="qty-btn plus">+</button>
+          </div>
+          <span class="price">$6.98</span>
         </li>
-    </ul>
-    <hr>
-    <p><span>Total: </span><strong id="total-price">$0.00</strong></p>
-    <button class="checkout-btn">Continue to Checkout</button>
-</div>
-<main>
-    <div class="portrait2">
-        <img src="/assets/images/portrait2.png" alt="">
-        <h1>PRODUCTS</h1>
-        <p>A clean space is a clear mind—let us help you find <br> both.</p>
+      </ul>
+      <hr />
+      <p><span>Total: </span><strong id="total-price">$0.00</strong></p>
+      <button class="checkout-btn" onclick="window.location.href=('cart-view.html')">View Cart</button>
     </div>
-    <div class="quote">
+    <main>
+      <div class="portrait2">
+        <img src="/assets/images/portrait2.png" alt="" />
+        <h1>PRODUCTS</h1>
+        <p>
+          A clean space is a clear mind—let us help you find <br />
+          both.
+        </p>
+      </div>
+      <div class="quote">
         <h4>See How It Work !</h4>
         <h1>Clean smarter, Live better!</h1>
-    </div>
-    <div class="products-card">
+      </div>
+      <div class="products-card">
         <h1>All Cleaning Products Buy Now</h1>
         <div class="categoryandsearch">
-            <div class="categories">
-                <button>Categories <img src="assets/images/list.png" alt=""></button>
-                <nav>
-                    <ul>
-                        <li><a href="#">All</a></li>
-                        <li><a href="#">Floor Cleaner</a></li>
-                        <li><a href="#">Breeze</a></li>
-                        <li><a href="#">Clothes Cleaner</a></li>
-                        <li><a href="#">Toilet Cleaner</a></li>
-                        <li><a href="#">Dish Cleaner</a></li>
-                        <li><a href="#">Glass Cleaner</a></li>
-                        <li><a href="#">Furniture Cleaner</a></li>
-                        <li><a href="#">Carpet Cleaner</a></li>
-                        <li><a href="#">Air Freshener</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="search">
-                <input type="text" placeholder="Search">
-            </div>
-        </div>  
-        <div class="card">  
-            <div class="card-item">
-                <img src="assets/images/Mr-Muscle.png" height="207" width="182"/>
-                <h3>Mr Muscle Marble</h3>
-                <h3>Floor CLeaner</h3>
-                <h4>$9.98</h4>
-                <a href="#">Add to cart</a>
-            </div><div class="card-item">
-                <img src="assets/images/Mr-Muscle1.png" height="207" width="182"/>
-                <h3>Mr Muscle Marble</h3>
-                <h3>Floor CLeaner</h3>
-                <h4>$7.98</h4>
-                <a href="#">Add to cart</a>
-            </div><div class="card-item">
-                <img src="assets/images/Mr-Muscle2.png" height="207" width="182"/>
-                <h3>Mr Muscle Marble</h3>
-                <h3>Floor CLeaner</h3>
-                <h4>$6.98</h4>
-                <a href="#">Add to cart</a>
-            </div><div class="card-item">
-                <img src="assets/images/Mr-Muscle3.png" height="207" width="182"/>
-                <h3>Mr Muscle Marble</h3>
-                <h3>Floor CLeaner</h3>
-                <h4>$14.98</h4>
-                <a href="#">Add to cart</a>
-            </div><div class="card-item">
-                <img src="assets/images/Mr-Muscle4.png" height="207" width="182"/>
-                <h3>Mr Muscle Marble</h3>
-                <h3>Floor CLeaner</h3>
-                <h4>$7.98</h4>
-                <a href="#">Add to cart</a>
-            </div><div class="card-item">
-                <img src="assets/images/Mr-Muscle5.png" height="207" width="182"/>
-                <h3>Mr Muscle Marble</h3>
-                <h3>Floor CLeaner</h3>
-                <h4>$10.98</h4>
-                <a href="#">Add to cart</a>
-            </div><div class="card-item">
-                <img src="assets/images/Mr-Muscle6.png" height="207" width="182"/>
-                <h3>Mr Muscle Marble</h3>
-                <h3>Floor CLeaner</h3>
-                <h4>$11.98</h4>
-                <a href="#">Add to cart</a>
-            </div><div class="card-item">
-                <img src="assets/images/Mr-Muscle7.png" height="207" width="182"/>
-                <h3>Mr Muscle Marble</h3>
-                <h3>Floor CLeaner</h3>
-                <h4>$8.98</h4>
-                <a href="#">Add to cart</a>
-            </div><div class="card-item">
-                <img src="assets/images/Mr-Muscle8.png" height="207" width="182"/>
-                <h3>Mr Muscle Marble</h3>
-                <h3>Floor CLeaner</h3>
-                <h4>$5.98</h4>
-                <a href="#">Add to cart</a>
-            </div><div class="card-item">
-                <img src="assets/images/Mr-Muscle9.png" height="207" width="182"/>
-                <h3>Mr Muscle Marble</h3>
-                <h3>Floor CLeaner</h3>
-                <h4>$3.98</h4>
-                <a href="#">Add to cart</a>
-            </div><div class="card-item">
-                <img src="assets/images/Mr-Muscle10.png" height="130" width="182"/>
-                <h3>Mr Muscle Marble</h3>
-                <h3>Floor CLeaner</h3>
-                <h4>$5.98</h4>
-                <a href="#">Add to cart</a>
-            </div><div class="card-item">
-                <img src="assets/images/Mr-Muscle11.png" height="207" width="182"/>
-                <h3>Mr Muscle Marble</h3>
-                <h3>Floor CLeaner</h3>
-                <h4>$6.98</h4>
-                <a href="#">Add to cart</a>
-            </div>
+          <div class="categories">
+            <button>
+              Categories <img src="assets/images/list.png" alt="" />
+            </button>
+            <nav>
+              <ul>
+                <li><a href="#">All</a></li>
+                <li><a href="#">Floor Cleaner</a></li>
+                <li><a href="#">Breeze</a></li>
+                <li><a href="#">Clothes Cleaner</a></li>
+                <li><a href="#">Toilet Cleaner</a></li>
+                <li><a href="#">Dish Cleaner</a></li>
+                <li><a href="#">Glass Cleaner</a></li>
+                <li><a href="#">Furniture Cleaner</a></li>
+                <li><a href="#">Carpet Cleaner</a></li>
+                <li><a href="#">Air Freshener</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="search">
+            <input type="text" placeholder="Search" />
+          </div>
         </div>
-    </div>
-</main>
-<footer>
-    <div class="on">
-        <img src="/assets/images/houselogo.png" alt="">
+        <div class="card">
+          <div class="card-item" >
+            <img src="assets/images/Mr-Muscle.png" height="207" width="182" />
+            <h3>Mr Muscle Marble</h3>
+            <h3>Floor CLeaner</h3>
+            <h4>$9.98</h4>
+            <a href="#" class="add-to-cart">Add to cart</a>
+          </div>
+          <div class="card-item" >
+            <img src="assets/images/Mr-Muscle1.png" height="207" width="182" />
+            <h3>Mr Muscle Marble</h3>
+            <h3>Floor CLeaner</h3>
+            <h4>$7.98</h4>
+            <a href="#" class="add-to-cart">Add to cart</a>
+          </div>
+          <div class="card-item" >
+            <img src="assets/images/Mr-Muscle2.png" height="207" width="182" />
+            <h3>Mr Muscle Marble</h3>
+            <h3>Floor CLeaner</h3>
+            <h4>$6.98</h4>
+            <a href="#" class="add-to-cart">Add to cart</a>
+          </div>
+          <div class="card-item" >
+            <img src="assets/images/Mr-Muscle3.png" height="207" width="182" />
+            <h3>Mr Muscle Marble</h3>
+            <h3>Floor CLeaner</h3>
+            <h4>$14.98</h4>
+            <a href="#" class="add-to-cart">Add to cart</a>
+          </div>
+          <div class="card-item" >
+            <img src="assets/images/Mr-Muscle4.png" height="207" width="182" />
+            <h3>Mr Muscle Marble</h3>
+            <h3>Floor CLeaner</h3>
+            <h4>$7.98</h4>
+            <a href="#" class="add-to-cart">Add to cart</a>
+          </div>
+          <div class="card-item" >
+            <img src="assets/images/Mr-Muscle5.png" height="207" width="182" />
+            <h3>Mr Muscle Marble</h3>
+            <h3>Floor CLeaner</h3>
+            <h4>$10.98</h4>
+            <a href="#" class="add-to-cart">Add to cart</a>
+          </div>
+          <div class="card-item" >
+            <img src="assets/images/Mr-Muscle6.png" height="207" width="182" />
+            <h3>Mr Muscle Marble</h3>
+            <h3>Floor CLeaner</h3>
+            <h4>$11.98</h4>
+            <a href="#" class="add-to-cart">Add to cart</a>
+          </div>
+          <div class="card-item" >
+            <img src="assets/images/Mr-Muscle7.png" height="207" width="182" />
+            <h3>Mr Muscle Marble</h3>
+            <h3>Floor CLeaner</h3>
+            <h4>$8.98</h4>
+            <a href="#" class="add-to-cart">Add to cart</a>
+          </div>
+          <div class="card-item" >
+            <img src="assets/images/Mr-Muscle8.png" height="207" width="182" />
+            <h3>Mr Muscle Marble</h3>
+            <h3>Floor CLeaner</h3>
+            <h4>$5.98</h4>
+            <a href="#" class="add-to-cart">Add to cart</a>
+          </div>
+          <div class="card-item" >
+            <img src="assets/images/Mr-Muscle9.png" height="207" width="182" />
+            <h3>Mr Muscle Marble</h3>
+            <h3>Floor CLeaner</h3>
+            <h4>$3.98</h4>
+            <a href="#" class="add-to-cart">Add to cart</a>
+          </div>
+          <div class="card-item" >
+            <img src="assets/images/Mr-Muscle10.png" height="130" width="182" />
+            <h3>Mr Muscle Marble</h3>
+            <h3>Floor CLeaner</h3>
+            <h4>$5.98</h4>
+            <a href="#" class="add-to-cart">Add to cart</a>
+          </div>
+          <div class="card-item" >
+            <img src="assets/images/Mr-Muscle11.png" height="207" width="182" />
+            <h3>Mr Muscle Marble</h3>
+            <h3>Floor CLeaner</h3>
+            <h4>$6.98</h4>
+            <a href="#" class="add-to-cart">Add to cart</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="on">
+        <img src="/assets/images/houselogo.png" alt="" />
         <h1>HOUSE CLEANING SERVICE</h1>
         <h3>Abouts more information you can :</h3>
         <a href="#">Contact us</a>
-    </div>
-    <div class="up">
+      </div>
+      <div class="up">
         <div class="menu">
-            <h1>Menu</h1>
-            <h3>Services and Prices</h3>
-            <h3>About</h3>
-            <h3>Reviews</h3>
-            <h3>For Customers</h3>
-
+          <h1>Menu</h1>
+          <h3>Services and Prices</h3>
+          <h3>About</h3>
+          <h3>Reviews</h3>
+          <h3>For Customers</h3>
         </div>
         <div class="contact">
-            <h1>Contact</h1>
-            <h3>Tel: 070 076 267</h3>
-            <h3>Email: info@cleaningservice.com</h3>
-            <h3>st110, TK, Phnom Penh</h3>
+          <h1>Contact</h1>
+          <h3>Tel: 070 076 267</h3>
+          <h3>Email: info@cleaningservice.com</h3>
+          <h3>st110, TK, Phnom Penh</h3>
         </div>
         <div class="social">
-            <h1>Social</h1>
-            <h3>Instagram</h3>
-            <h3>Twitter</h3>
-            <h3>Telegram</h3>
-            <h3>Facebook</h3>
+          <h1>Social</h1>
+          <h3>Instagram</h3>
+          <h3>Twitter</h3>
+          <h3>Telegram</h3>
+          <h3>Facebook</h3>
         </div>
-    </div>
-</footer>
-</body>
-<script src="assets/scripts/script.js"></script>
+      </div>
+    </footer>
+  </body>
+  <script src="assets/scripts/script.js"></script>
 </html>

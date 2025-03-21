@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <title>Cleaning Seveice</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 </head>
 <body class="no-scroll">
 <header>
-  <div id="loader">Loading...</div>
+  <div id="loading-screen">
+    <div class="spinner"></div>
+</div>
   <div class="logo_name">
     <a href="index.html"><img src="assets/images/logocleaning.png" alt=""></a>
   </div>
@@ -18,7 +22,12 @@
       <li><a href="service.html">Services</a></li>
       <li><a href="products.html">Products</a></li>
       <li><a href="contact.html">Contact us</a></li>
-      <li id="cart-item" style="display: none;"><a href="#" id="cart-icon"><img src="assets/images/cart-icon-28344 9.png" alt="Cart"></a></li>
+      <li id="cart-item" style="display: none; position: relative;">
+        <a href="#" id="cart-icon">
+            <img src="assets/images/cart-icon-28344 9.png" alt="Cart">
+            <span id="cart-count" class="cart-badge">0</span>
+        </a>
+    </li>
       <li id="login-item"><a href="login.html" class="login">Login</a></li>
       <li id="signup-item"><a href="signup.html" class="signup">Sign up</a></li>
       <li class="user-profile" id="profile-item" style="display: none;">
@@ -31,6 +40,11 @@
     </ul>
   </nav>
 </header>
+<div id="telegram-popup">
+  <a href="https://t.me/khemrak53" target="_blank">
+      <i class="fa-brands fa-telegram"></i>
+  </a>
+</div>
 <div id="cart-sidebar" class="cart-sidebar">
   <button id="close-cart">&times;</button>
   <h2>Your Cart</h2>
@@ -121,19 +135,19 @@
         <h1>Professional Cleaning Services</h1>
          <div class="card">
            <div class="card-item">
-             <img src="/assets/images/cleaning1%201.png" alt="">
+             <img src="/assets/images/cleaning1%201.png" alt="" onclick="window.location.href=('service.html')">
              <h3>Office Cleaning</h3>
              <p>A clean and organized office is more than just aesthetically pleasing.......</p>
              <a href="#">Read More</a>
            </div>
            <div class="card-item">
-             <img src="/assets/images/1702818565412%201.png" alt="">
+             <img src="/assets/images/1702818565412%201.png" alt="" onclick="window.location.href=('service.html')">
              <h3>House Cleaning</h3>
              <p>A clean home is more than just a visually appealing space....</p>
              <a href="#">Read More</a>
            </div>
            <div class="card-item">
-             <img src="/assets/images/young-cleaner-.png" alt="">
+             <img src="/assets/images/young-cleaner-.png" alt="" onclick="window.location.href=('service.html')">
              <h3>Commercial Cleaning</h3>
              <p>In any business, maintaining a clean and organized environment is.......</p>
              <a href="#">Read More</a>
@@ -179,7 +193,7 @@
       <img src="/assets/images/houselogo.png" alt="">
       <h1>HOUSE CLEANING SERVICE</h1>
       <h3>Abouts more information you can :</h3>
-      <a href="#">Contact us</a>
+      <a href="contact.html">Contact us</a>
     </div>
     <div class="up">
       <div class="menu">
@@ -207,5 +221,15 @@
   </footer>
 
 <script src="assets/scripts/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    setTimeout(function() {
+        $("#loading-screen").fadeOut(500, function() {
+            $("#content").fadeIn(500);
+        });
+    }, 2000); // Simulates loading for 2 seconds
+});
+</script>
 </body>
 </html>

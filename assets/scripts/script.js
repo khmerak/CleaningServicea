@@ -126,3 +126,57 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    let cartCount = 0; // Initialize cart count
+    const cartBadge = document.getElementById("cart-count");
+    const cartItem = document.getElementById("cart-item");
+    const totalPriceEl = document.getElementById("total-price");
+    let totalPrice = 0;
+
+    // Function to update cart count and price
+    function updateCartDisplay() {
+        cartBadge.textContent = cartCount;
+        cartBadge.style.display = cartCount => 0 ? "block" : "none";
+        cartItem.style.display = cartCount => 0 ? "inline-block" : "none";
+        totalPriceEl.textContent = `$${totalPrice.toFixed(2)}`;
+    }
+
+    // Add to cart functionality
+    document.querySelectorAll(".add-to-cart").forEach(button => {
+        button.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            let price = parseFloat(this.previousElementSibling.textContent.replace("$", ""));
+            cartCount++;
+            totalPrice += price;
+            updateCartDisplay();
+        });
+    });
+
+    // Quantity increase/decrease buttons in cart
+    document.querySelectorAll(".qty-btn").forEach(button => {
+        button.addEventListener("click", function () {
+            let qtyEl = this.parentElement.querySelector(".qty");
+            let priceEl = this.parentElement.nextElementSibling;
+            let unitPrice = parseFloat(priceEl.textContent.replace("$", ""));
+            let qty = parseInt(qtyEl.textContent);
+
+            if (this.classList.contains("plus")) {
+                qty++;
+                cartCount++;
+                totalPrice += unitPrice;
+            } else if (this.classList.contains("minus") && qty > 1) {
+                qty--;
+                cartCount--;
+                totalPrice -= unitPrice;
+            }
+
+            qtyEl.textContent = qty;
+            updateCartDisplay();
+        });
+    });
+
+    // Initialize cart UI
+    updateCartDisplay();
+});
+
