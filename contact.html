@@ -9,74 +9,82 @@
 
 </head>
 <body>
-<header>
-    <div class="logo_name">
-        <a href="index.html"><img src="assets/images/logocleaning.png" alt=""></a>
-    </div>
-    <nav>
-        <ul id="nav-menu">
+    <header>
+        <div id="loading-screen">
+          <div class="spinner"></div>
+      </div>
+        <div class="logo_name">
+          <a href="index.html"><img src="assets/images/logocleaning.png" alt=""></a>
+        </div>
+        <nav>
+          <ul id="nav-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About us</a></li>
             <li><a href="service.html">Services</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="contact.html">Contact us</a></li>
-            <li id="cart-item" style="display: none;"><a href="#" id="cart-icon"><img src="assets/images/cart-icon-28344 9.png" alt="Cart"></a></li>
+            <li id="cart-item" style="display: none; position: relative;">
+              <a href="#" id="cart-icon">
+                  <img src="assets/images/cart-icon-28344 9.png" alt="Cart">
+                  <span id="cart-count" class="cart-badge">0</span>
+              </a>
+          </li>
             <li id="login-item"><a href="login.html" class="login">Login</a></li>
             <li id="signup-item"><a href="signup.html" class="signup">Sign up</a></li>
             <li class="user-profile" id="profile-item" style="display: none;">
-                <a href="#"><img src="assets/images/image.png" alt="User"></a>
-                <ul class="dropdown">
-                    <li><a href="profile.html">Profile</a></li>
-                    <li><a href="#" onclick="logout()">Logout</a></li>
-                </ul>
+              <a href="#"><img src="assets/images/image.png" alt="User"></a>
+              <ul class="dropdown">
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+              </ul>
             </li>
-        </ul>
-    </nav>
-</header>
+          </ul>
+        </nav>
+      </header>
 <div id="telegram-popup">
     <a href="https://t.me/khemrak53" target="_blank">
         <i class="fa-brands fa-telegram"></i>
     </a>
   </div>
-<div id="cart-sidebar" class="cart-sidebar">
+  <div id="cart-sidebar" class="cart-sidebar">
     <button id="close-cart">&times;</button>
     <h2>Your Cart</h2>
     <ul>
-        <li>
-            <img src="./assets/images/Mr-Muscle.png" alt=""> <a href="/cart-details.html">Floor Cleaner</a>
-            <div class="qty-container">
-                <button class="qty-btn minus">-</button>
-                <span class="qty">1</span>
-                <button class="qty-btn plus">+</button>
-            </div>
-            <span class="price">$9.98</span>
-
-        </li>
-
-        <li>
-            <img src="./assets/images/Mr-Muscle1.png" alt=""> <a href="/cart-details.html">Breeze</a>
-            <div class="qty-container">
-                <button class="qty-btn minus">-</button>
-                <span class="qty">1</span>
-                <button class="qty-btn plus">+</button>
-            </div>
-            <span class="price">$7.98</span>
-        </li>
-
-        <li>
-            <img src="./assets/images/Mr-Muscle2.png" alt=""> <a href="/cart-details.html">Cloths Cleaner</a>
-            <div class="qty-container">
-                <button class="qty-btn minus">-</button>
-                <span class="qty">1</span>
-                <button class="qty-btn plus">+</button>
-            </div>
-            <span class="price">$6.98</span>
-        </li>
+      <li>
+        <img src="./assets/images/Mr-Muscle.png" alt=""> <a href="/cart-details.html">Floor Cleaner</a>
+        <div class="qty-container">
+          <button class="qty-btn minus">-</button>
+          <span class="qty">1</span>
+          <button class="qty-btn plus">+</button>
+        </div>
+        <span class="price">$9.98</span>
+  
+      </li>
+  
+      <li>
+        <img src="./assets/images/Mr-Muscle1.png" alt=""> <a href="/cart-details.html">Breeze</a>
+        <div class="qty-container">
+          <button class="qty-btn minus">-</button>
+          <span class="qty">1</span>
+          <button class="qty-btn plus">+</button>
+        </div>
+        <span class="price">$7.98</span>
+      </li>
+  
+      <li>
+        <img src="./assets/images/Mr-Muscle2.png" alt=""> <a href="/cart-details.html">Cloths Cleaner</a>
+        <div class="qty-container">
+          <button class="qty-btn minus">-</button>
+          <span class="qty">1</span>
+          <button class="qty-btn plus">+</button>
+        </div>
+        <span class="price">$6.98</span>
+      </li>
     </ul>
     <hr>
     <p><span>Total: </span><strong id="total-price">$0.00</strong></p>
-    <button class="checkout-btn">Continue to Checkout</button>
-</div>
+    <button class="checkout-btn" onclick="window.location.href=('cart-view.html')">View Cart</button>
+  </div>
 <main>
     <div class="about">
         <img src="/assets/images/zarla1.png" alt="about us">

@@ -35,6 +35,18 @@ body{
     font-size: 30px;
     color: white;
 }
+.cart-badge {
+    position: absolute;
+    top: -30px;
+    right: 35px;
+    background-color: #10669f;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 50%;
+    display: block; 
+  }
 /* Home Page */
 header{
     height: 100px;
@@ -43,6 +55,7 @@ header{
     gap: 100px;
     align-items: center;
 }
+
 header .logo_name img{
     width: 200px;
 }

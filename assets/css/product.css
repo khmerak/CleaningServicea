@@ -110,8 +110,8 @@ nav ul li img {
 .cart-badge {
   position: absolute;
   top: -30px;
-  right: 0;
-  background-color: red;
+  right: 35px;
+  background-color: #10669f;
   color: white;
   font-size: 12px;
   font-weight: bold;

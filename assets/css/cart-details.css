@@ -14,27 +14,28 @@ body{
     text-wrap: wrap;
 }
 #telegram-popup {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: #0088cc;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #0088cc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 }
 #telegram-popup:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 #telegram-popup i {
-    font-size: 30px;
-    color: white;
+  font-size: 30px;
+  color: white;
 }
+
 /* Home Page */
 header{
     height: 100px;
@@ -139,8 +140,8 @@ header nav ul li a img{
 .cart-badge {
     position: absolute;
     top: -30px;
-    right: 0;
-    background-color: red;
+    right: 35px;
+    background-color: #10669f;
     color: white;
     font-size: 12px;
     font-weight: bold;
@@ -217,7 +218,23 @@ header nav ul li a img{
 .cart-sidebar.active {
     right: 0; /* Show sidebar */
 }
+.checkout-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background: #10669f;
+    color: white;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
+.checkout-btn:hover {
+    background: #0056b3;
+}
 #close-cart {
     position: absolute;
     top: 10px;

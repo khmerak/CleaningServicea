@@ -1,157 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>about</title>
-    <link rel="stylesheet" href="assets/css/about.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-</head>
-<body>
-<header>
-    <div class="logo_name">
-        <a href="index.html"><img src="assets/images/logocleaning.png" alt=""></a>
-    </div>
-    <nav>
+    <link rel="stylesheet" href="assets/css/about.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div id="loading-screen">
+        <div class="spinner"></div>
+      </div>
+      <div class="logo_name">
+        <a href="index.html"
+          ><img src="assets/images/logocleaning.png" alt=""
+        /></a>
+      </div>
+      <nav>
         <ul id="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About us</a></li>
-            <li><a href="service.html">Services</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="contact.html">Contact us</a></li>
-            <li id="cart-item" style="display: none;"><a href="#" id="cart-icon"><img src="assets/images/cart-icon-28344 9.png" alt="Cart"></a></li>
-            <li id="login-item"><a href="login.html" class="login">Login</a></li>
-            <li id="signup-item"><a href="signup.html" class="signup">Sign up</a></li>
-            <li class="user-profile" id="profile-item" style="display: none;">
-                <a href="#"><img src="assets/images/image.png" alt="User"></a>
-                <ul class="dropdown">
-                    <li><a href="profile.html">Profile</a></li>
-                    <li><a href="#" onclick="logout()">Logout</a></li>
-                </ul>
-            </li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li id="cart-item" style="display: none; position: relative">
+            <a href="#" id="cart-icon">
+              <img src="assets/images/cart-icon-28344 9.png" alt="Cart" />
+              <span id="cart-count" class="cart-badge">0</span>
+            </a>
+          </li>
+          <li id="login-item"><a href="login.html" class="login">Login</a></li>
+          <li id="signup-item">
+            <a href="signup.html" class="signup">Sign up</a>
+          </li>
+          <li class="user-profile" id="profile-item" style="display: none">
+            <a href="#"><img src="assets/images/image.png" alt="User" /></a>
+            <ul class="dropdown">
+              <li><a href="profile.html">Profile</a></li>
+              <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+          </li>
         </ul>
-    </nav>
-</header>
-<div id="telegram-popup">
-    <a href="https://t.me/khemrak53" target="_blank">
+      </nav>
+    </header>
+    <div id="telegram-popup">
+      <a href="https://t.me/khemrak53" target="_blank">
         <i class="fa-brands fa-telegram"></i>
-    </a>
-  </div>
-<div id="cart-sidebar" class="cart-sidebar">
-    <button id="close-cart">&times;</button>
-    <h2>Your Cart</h2>
-    <ul>
+      </a>
+    </div>
+    <div id="cart-sidebar" class="cart-sidebar">
+      <button id="close-cart">&times;</button>
+      <h2>Your Cart</h2>
+      <ul>
         <li>
-            <img src="./assets/images/Mr-Muscle.png" alt=""> <a href="/cart-details.html">Floor Cleaner</a>
-            <div class="qty-container">
-                <button class="qty-btn minus">-</button>
-                <span class="qty">1</span>
-                <button class="qty-btn plus">+</button>
-            </div>
-            <span class="price">$9.98</span>
-
+          <img src="./assets/images/Mr-Muscle.png" alt="" />
+          <a href="/cart-details.html">Floor Cleaner</a>
+          <div class="qty-container">
+            <button class="qty-btn minus">-</button>
+            <span class="qty">1</span>
+            <button class="qty-btn plus">+</button>
+          </div>
+          <span class="price">$9.98</span>
         </li>
 
         <li>
-            <img src="./assets/images/Mr-Muscle1.png" alt=""> <a href="/cart-details.html">Breeze</a>
-            <div class="qty-container">
-                <button class="qty-btn minus">-</button>
-                <span class="qty">1</span>
-                <button class="qty-btn plus">+</button>
-            </div>
-            <span class="price">$7.98</span>
+          <img src="./assets/images/Mr-Muscle1.png" alt="" />
+          <a href="/cart-details.html">Breeze</a>
+          <div class="qty-container">
+            <button class="qty-btn minus">-</button>
+            <span class="qty">1</span>
+            <button class="qty-btn plus">+</button>
+          </div>
+          <span class="price">$7.98</span>
         </li>
 
         <li>
-            <img src="./assets/images/Mr-Muscle2.png" alt=""> <a href="/cart-details.html">Cloths Cleaner</a>
-            <div class="qty-container">
-                <button class="qty-btn minus">-</button>
-                <span class="qty">1</span>
-                <button class="qty-btn plus">+</button>
-            </div>
-            <span class="price">$6.98</span>
+          <img src="./assets/images/Mr-Muscle2.png" alt="" />
+          <a href="/cart-details.html">Cloths Cleaner</a>
+          <div class="qty-container">
+            <button class="qty-btn minus">-</button>
+            <span class="qty">1</span>
+            <button class="qty-btn plus">+</button>
+          </div>
+          <span class="price">$6.98</span>
         </li>
-    </ul>
-    <hr>
-    <p><span>Total: </span><strong id="total-price">$0.00</strong></p>
-    <button class="checkout-btn">Continue to Checkout</button>
-</div>
+      </ul>
+      <hr />
+      <p><span>Total: </span><strong id="total-price">$0.00</strong></p>
+      <button
+        class="checkout-btn"
+        onclick="window.location.href=('cart-view.html')"
+      >
+        View Cart
+      </button>
+    </div>
 
-<main>
-    <div class="about">
-        <img src="/assets/images/zarla.png" alt="about us">
+    <main>
+      <div class="about">
+        <img src="/assets/images/zarla.png" alt="about us" />
         <h1>ABOUT <span>US</span></h1>
-        <p>From dust to sparkle, we’ve got every inch covered—so you can enjoy a fresh, clean start.</p>
-    </div>
-    <div class="check">
+        <p class="about-text">
+          From dust to sparkle, we’ve got every inch covered—so you can enjoy a
+          fresh, clean start.
+        </p>
+      </div>
+      <div class="check">
         <div class="text">
-            <h3>HIGHEST STANDARDS TO A GROWING DEMAND</h3>
-            <h1>Because <span>Quality is necessary</span></h1>
-            <p>Cambodia saw strong, uninterrupted growth for most of the past two decades. Booming Real Estate sector led to a high demand for related services such as cleaning, pest or termite control, & landscaping services.</p>
-            <p>Our company was established to dedicate our services to our clients, from property developers to facility managers, our passion for excellence leads us to continuously invest in improving our internal processes, our employees and our relationship with every single business we serve.</p>
-            <a href="#">Check Out Our Services</a>
+          <h3>HIGHEST STANDARDS TO A GROWING DEMAND</h3>
+          <h1>Because <span>Quality is necessary</span></h1>
+          <p>
+            Cambodia saw strong, uninterrupted growth for most of the past two
+            decades. Booming Real Estate sector led to a high demand for related
+            services such as cleaning, pest or termite control, & landscaping
+            services.
+          </p>
+          <p>
+            Our company was established to dedicate our services to our clients,
+            from property developers to facility managers, our passion for
+            excellence leads us to continuously invest in improving our internal
+            processes, our employees and our relationship with every single
+            business we serve.
+          </p>
+          <a href="#">Check Out Our Services</a>
         </div>
-        <img src="assets/images/Al-Sakhama.png" alt="">
-    </div>
-    <section class="newtext">
+        <img src="assets/images/Al-Sakhama.png" alt="" />
+      </div>
+      <section class="newtext">
         <h1>Why House Cleaning Service in Cambodia?</h1>
-        <p>OUR BEST FEATURES TO BE THE RIGHT SOLUTION FOR YOUR COMMERCIAL CLEANING, GARDENING, SECURITY, PEST & TERMITE CONTROL NEEDS</p>
-    </section>
-
-</main>
-<section class="detail-contents">
-    <div class="content">
-        <img src="assets/images/images.png" >
+        <p>
+          OUR BEST FEATURES TO BE THE RIGHT SOLUTION FOR YOUR COMMERCIAL
+          CLEANING, GARDENING, SECURITY, PEST & TERMITE CONTROL NEEDS
+        </p>
+      </section>
+    </main>
+    <section class="detail-contents">
+      <div class="content">
+        <img src="assets/images/images.png" />
         <h1>Highly Trained Employees</h1>
-        <p>Our crew members are extensively trained and follow strict standard Operating Procedures to ensure the job is done right.</p>
-    </div>
-    <div class="content">
-        <img src="assets/images/119.png" >
+        <p>
+          Our crew members are extensively trained and follow strict standard
+          Operating Procedures to ensure the job is done right.
+        </p>
+      </div>
+      <div class="content">
+        <img src="assets/images/119.png" />
         <h1>Security and Safety</h1>
-        <p>Every crew member goes through a rigorous background check, fully vaccinated and outfitted in a formal MC Services uniform so you know they are sent by us.</p>
-    </div>
-    <div class="content">
-        <img src="assets/images/361.png" >
+        <p>
+          Every crew member goes through a rigorous background check, fully
+          vaccinated and outfitted in a formal MC Services uniform so you know
+          they are sent by us.
+        </p>
+      </div>
+      <div class="content">
+        <img src="assets/images/361.png" />
         <h1>Quality Control</h1>
-        <p>As we know consistency is the most critical part of our business, we monitor our staff’s performance by conducting random inspections by our quality control department.</p>
-    </div>
-    <div class="content">
-        <img src="assets/images/382032.png" height="135" width="205"/>
+        <p>
+          As we know consistency is the most critical part of our business, we
+          monitor our staff’s performance by conducting random inspections by
+          our quality control department.
+        </p>
+      </div>
+      <div class="content">
+        <img src="assets/images/382032.png" height="135" width="205" />
         <h1>Insurance & Liability</h1>
-        <p>For a complete peace of mind, no matter for cleaning, pest control, gardening or security services, all our crew members are fully covered in case of any accident or loss at our client location.</p>
-    </div>
-</section>
-<footer>
-    <div class="on">
-        <img src="/assets/images/houselogo.png" alt="">
+        <p>
+          For a complete peace of mind, no matter for cleaning, pest control,
+          gardening or security services, all our crew members are fully covered
+          in case of any accident or loss at our client location.
+        </p>
+      </div>
+    </section>
+    <footer>
+      <div class="on">
+        <img src="/assets/images/houselogo.png" alt="" />
         <h1>HOUSE CLEANING SERVICE</h1>
         <h3>Abouts more information you can :</h3>
         <a href="#">Contact us</a>
-    </div>
-    <div class="up">
+      </div>
+      <div class="up">
         <div class="menu">
-            <h1>Menu</h1>
-            <h3>Services and Prices</h3>
-            <h3>About</h3>
-            <h3>Reviews</h3>
-            <h3>For Customers</h3>
-
+          <h1>Menu</h1>
+          <h3>Services and Prices</h3>
+          <h3>About</h3>
+          <h3>Reviews</h3>
+          <h3>For Customers</h3>
         </div>
         <div class="contact">
-            <h1>Contact</h1>
-            <h3>Tel: 070 076 267</h3>
-            <h3>Email: info@cleaningservice.com</h3>
-            <h3>st110, TK, Phnom Penh</h3>
+          <h1>Contact</h1>
+          <h3>Tel: 070 076 267</h3>
+          <h3>Email: info@cleaningservice.com</h3>
+          <h3>st110, TK, Phnom Penh</h3>
         </div>
         <div class="social">
-            <h1>Social</h1>
-            <h3>Instagram</h3>
-            <h3>Twitter</h3>
-            <h3>Telegram</h3>
-            <h3>Facebook</h3>
+          <h1>Social</h1>
+          <h3>Instagram</h3>
+          <h3>Twitter</h3>
+          <h3>Telegram</h3>
+          <h3>Facebook</h3>
         </div>
-    </div>
-</footer>
-</body>
-<script src="assets/scripts/script.js"></script>
+      </div>
+    </footer>
+  </body>
+  <script src="assets/scripts/script.js"></script>
 </html>
