@@ -551,7 +551,7 @@ footer .up .menu h3,
   font-weight: 200;
 }
 
-@media all and (min-width: 1024px) {
+@media  (max-width: 1024px) {
   header .logo_name img {
     width: 110px;
   }
@@ -606,7 +606,7 @@ footer .up .menu h3,
   }
 }
 
-@media all and (min-width: 768px) {
+@media  (max-width: 768px) {
   header .logo_name img {
     width: 110px;
   }
@@ -662,7 +662,7 @@ footer .up .menu h3,
   }
 }
 
-@media all and (min-width: 425px) {
+@media (max-width: 425px) {
   header .logo_name img {
     width: 150px;
   }

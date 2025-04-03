@@ -117,7 +117,7 @@ nav ul li img {
   font-weight: bold;
   padding: 4px 8px;
   border-radius: 50%;
-  display: block; 
+  display: block;
 }
 nav ul li a::after {
   content: "";
@@ -281,7 +281,7 @@ header nav ul li a img {
 }
 .portrait2 h1 {
   position: absolute;
-  top: 37%;
+  top: 30%;
   left: 13%;
   font-size: 75px;
   font-weight: 400;
@@ -290,7 +290,7 @@ header nav ul li a img {
 }
 .portrait2 p {
   position: absolute;
-  top: 50%;
+  top: 45%;
   letter-spacing: 1px;
   left: 13%;
   color: #10669f;
@@ -319,15 +319,15 @@ header nav ul li a img {
 }
 
 button {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    color: #007bff;
-    border-radius: 15px;
-    border: none;
-    background-color: white;
-    font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: #007bff;
+  border-radius: 15px;
+  border: none;
+  background-color: white;
+  font-size: 16px;
 }
 button img {
   margin-left: 10px;
@@ -355,41 +355,40 @@ button img {
   padding: 0;
 }
 .categories nav ul li {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .categories nav ul li a {
-    position: relative;
-    display: block;
-    padding: 10px;
-    text-align: left;
-    text-decoration: none;
-    color: #007bff;
-    transition: color 0.3s ease-in-out;
-    z-index: 1;
+  position: relative;
+  display: block;
+  padding: 10px;
+  text-align: left;
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s ease-in-out;
+  z-index: 1;
 }
 
 .categories nav ul li a::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: #cacaca;
-    transition: left 0.3s ease-in-out;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #cacaca;
+  transition: left 0.3s ease-in-out;
+  z-index: -1;
 }
 
 .categories nav ul li a:hover::before {
-    left: 0;
+  left: 0;
 }
 
 .categories nav ul li a:hover {
-    color: #0056b3;
+  color: #0056b3;
 }
-
 
 .search input {
   width: 100%;
@@ -400,7 +399,6 @@ button img {
   border-radius: 15px;
   margin-bottom: 10px;
 }
-
 
 .products-card {
   display: block;
@@ -524,4 +522,90 @@ footer .up .menu h3,
 .contact h3,
 .social h3 {
   font-weight: 200;
+}
+
+@media  (max-width: 1024px) {
+  header .logo_name img {
+    width: 110px;
+  }
+  header nav ul {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+  }
+  header nav ul li {
+    margin-left: 10px;
+  }
+  header nav ul li a {
+    font-size: 13px;
+  }
+  .card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+}
+
+@media  (max-width: 768px) {
+  header .logo_name img {
+    width: 110px;
+  }
+  header nav ul {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+  }
+  header nav ul li {
+    margin-left: 10px;
+  }
+  header nav ul li a {
+    font-size: 13px;
+  }
+  .portrait2 h1 {
+    font-size: 50px;
+    top: 20%;
+  }
+  .portrait2 p {
+    font-size: 20px;
+    top: 16%;
+  }
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
+
+@media (max-width: 425px) {
+  header .logo_name img {
+    width: 150px;
+  }
+  header nav ul {
+    width: 130%;
+    display: flex;
+    padding: 10px;
+    margin-left: -100px;
+    gap: 10px;
+  }
+  header nav ul li {
+    margin-left: 10px;
+  }
+  header nav ul li a {
+    font-size: 18px;
+  }
+  .portrait2 h1 {
+    font-size: 50px;
+    top: 10%;
+  }
+  .portrait2 p {
+    font-size: 20px;
+    top: 16%;
+  }
+  .card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
 }

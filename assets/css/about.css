@@ -439,7 +439,8 @@ footer .up .menu h3,
   font-weight: 200;
 }
 
-@media all and (max-width: 1024px) {
+
+@media  (max-width: 1024px) {
   header .logo_name img {
     margin-left: -70px;
     width: 120px;
@@ -500,9 +501,12 @@ footer .up .menu h3,
     top: 90px;
     width: 50%;
   }
+  .detail-contents {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+  }
 }
-
-@media all and (min-width: 768px) {
+@media  (max-width: 768px) {
   header {
     margin-left: -30px;
   }
@@ -521,8 +525,12 @@ footer .up .menu h3,
   header nav ul li a {
     font-size: 15px;
   }
+  .detail-contents {
+    display: flex;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
-@media all and (min-width: 425px) {
+@media (max-width: 425px) {
     header .logo_name img {
       margin-left: -90px;
       width: 110px;
